@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8B7EC07-CC61-4C51-8771-D32F6AD57D86}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Gen</RootNamespace>
+    <AssemblyName>Gen</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <Commandlineparameters>../../../ ./  ../../generated/</Commandlineparameters>
+    <EnvironmentVariables>
+      <EnvironmentVariables>
+        <Variable name="LD_LIBRARY_PATH" value="/home/tomba/mono/CppSharp/build/gmake/lib/Release_x64" />
+      </EnvironmentVariables>
+    </EnvironmentVariables>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="CppSharp.AST">
+      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.AST.dll</HintPath>
+    </Reference>
+    <Reference Include="CppSharp">
+      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CppSharp.Generator">
+      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.Generator.dll</HintPath>
+    </Reference>
+    <Reference Include="CppSharp.Parser.CSharp">
+      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.Parser.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CppSharp.Parser.Gen">
+      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.Parser.Gen.exe</HintPath>
+    </Reference>
+    <Reference Include="CppSharp.Runtime">
+      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\Gen.cs">
+      <Link>Gen.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+Name: native
+Description: 
+Version: 0.1
+Libs: -L"/home/tomba/mono/cppsharp-test/monodev/bin/Debug" -lnative
+Cflags: -I"/home/tomba/mono/cppsharp-test"

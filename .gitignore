@@ -1,4 +1,6 @@
 *.exe
 *.so
 native.cs
-
+monodev/bin
+monodev/generated
+*.userprefs
