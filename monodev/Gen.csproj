@@ -22,7 +22,7 @@
     <Commandlineparameters>../../../ ./  ../../generated/</Commandlineparameters>
     <EnvironmentVariables>
       <EnvironmentVariables>
-        <Variable name="LD_LIBRARY_PATH" value="/home/tomba/mono/CppSharp/build/gmake/lib/Release_x64" />
+        <Variable name="LD_LIBRARY_PATH" value="/home/tomba/mono/cppsharp/build/gmake/lib/Release_x64" />
       </EnvironmentVariables>
     </EnvironmentVariables>
   </PropertyGroup>
@@ -37,22 +37,22 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="CppSharp.AST">
-      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.AST.dll</HintPath>
+      <HintPath>..\..\cppsharp\build\gmake\lib\Release_x64\CppSharp.AST.dll</HintPath>
     </Reference>
     <Reference Include="CppSharp">
-      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.dll</HintPath>
+      <HintPath>..\..\cppsharp\build\gmake\lib\Release_x64\CppSharp.dll</HintPath>
     </Reference>
     <Reference Include="CppSharp.Generator">
-      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.Generator.dll</HintPath>
+      <HintPath>..\..\cppsharp\build\gmake\lib\Release_x64\CppSharp.Generator.dll</HintPath>
     </Reference>
     <Reference Include="CppSharp.Parser.CSharp">
-      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.Parser.CSharp.dll</HintPath>
+      <HintPath>..\..\cppsharp\build\gmake\lib\Release_x64\CppSharp.Parser.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="CppSharp.Parser.Gen">
-      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.Parser.Gen.exe</HintPath>
+      <HintPath>..\..\cppsharp\build\gmake\lib\Release_x64\CppSharp.Parser.Gen.exe</HintPath>
     </Reference>
     <Reference Include="CppSharp.Runtime">
-      <HintPath>..\..\CppSharp\build\gmake\lib\Release_x64\CppSharp.Runtime.dll</HintPath>
+      <HintPath>..\..\cppsharp\build\gmake\lib\Release_x64\CppSharp.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
