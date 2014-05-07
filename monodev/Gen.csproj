@@ -22,7 +22,7 @@
     <Commandlineparameters>../../../ ./  ../../generated/</Commandlineparameters>
     <EnvironmentVariables>
       <EnvironmentVariables>
-        <Variable name="LD_LIBRARY_PATH" value="/home/tomba/mono/cppsharp/build/gmake/lib/Release_x64" />
+        <Variable name="LD_LIBRARY_PATH" value="../../../../cppsharp/build/gmake/lib/Release_x64" />
       </EnvironmentVariables>
     </EnvironmentVariables>
   </PropertyGroup>

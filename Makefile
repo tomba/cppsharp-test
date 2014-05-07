@@ -1,5 +1,5 @@
 
-LIBDIR=/home/tomba/mono/cppsharp/build/gmake/lib/Release_x64
+LIBDIR=../cppsharp/build/gmake/lib/Release_x64
 
 all: libnative.so Test.exe
 
