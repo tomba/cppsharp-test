@@ -10,6 +10,10 @@ int addC(int a, int b)
 	return a + b;
 }
 
+TestClass::TestClass()
+{
+}
+
 void TestClass::set_values(int a, int b)
 {
 	this->a = a;

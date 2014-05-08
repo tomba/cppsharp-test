@@ -3,10 +3,16 @@ LIBDIR=../cppsharp/build/gmake/lib/Release_x64
 
 all: libnative.so Test.exe
 
-libnative.so: native.cpp native.h
-	g++ -shared -o libnative.so native.cpp
+native.o: native.h
+	g++ -c -o native.o native.cpp
 
-Gen.exe: libnative.so Gen.cs
+libnative.so: native.o
+	g++ -shared -o libnative.so native.o
+
+libnative.a: native.o
+	ar rcs libnative.a native.o
+
+Gen.exe: libnative.so libnative.a Gen.cs
 	mcs Gen.cs -lib:${LIBDIR} -r:CppSharp -r:CppSharp.AST -r:CppSharp.Generator -r:CppSharp.Runtime -r:CppSharp.Parser.CSharp
 
 native.cs: Gen.exe
@@ -21,5 +27,5 @@ runtest: native.cs Test.exe
 	mono Test.exe
 
 clean:
-	rm -f libnative.so Gen.exe Test.exe native.cs
+	rm -f *.so *.a *.o *.exe native.cs
 

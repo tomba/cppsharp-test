@@ -50,11 +50,13 @@ namespace ConsoleApplication1
 			options.OutputDir = m_outPath;
 
 			options.addLibraryDirs(m_libPath);
-			options.Libraries.Add("libnative.so");
+			options.Libraries.Add("libnative.a");
 
 			options.addIncludeDirs(m_headerPath);
 			options.Headers.Add("native.h");
 
+			options.Verbose = true;
+			options.CheckSymbols = true;
 		}
 
 		public void SetupPasses(Driver driver)

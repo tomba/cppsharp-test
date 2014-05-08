@@ -13,7 +13,6 @@ class Program
 		Console.WriteLine(sum);
 
 		var ob = new native.TestClass();
-
 		ob.set_values(5, 6);
 		sum = ob.sum();
 		Console.WriteLine(sum);

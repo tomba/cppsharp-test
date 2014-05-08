@@ -12,6 +12,7 @@ class TestClass
 	int a, b;
 
 	public:
+	TestClass();
 	void set_values(int, int);
 	int sum(void);
 };
