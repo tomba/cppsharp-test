@@ -4,10 +4,10 @@ LIBDIR=../cppsharp/build/gmake/lib/Release_x64
 all: libnative.so Test.exe
 
 native.o: native.h
-	g++ -c -o native.o native.cpp
+	g++ -Wall -g -fPIC -c -o native.o native.cpp
 
 libnative.so: native.o
-	g++ -shared -o libnative.so native.o
+	g++ -Wall -shared -o libnative.so native.o
 
 libnative.a: native.o
 	ar rcs libnative.a native.o
