@@ -13,7 +13,7 @@ libnative.a: native.o
 	ar rcs libnative.a native.o
 
 Gen.exe: libnative.so libnative.a Gen.cs
-	mcs Gen.cs -lib:${LIBDIR} -r:CppSharp -r:CppSharp.AST -r:CppSharp.Generator -r:CppSharp.Runtime -r:CppSharp.Parser.CSharp
+	mcs Gen.cs -lib:${LIBDIR} -r:CppSharp.AST -r:CppSharp.Generator -r:CppSharp.Parser.CSharp
 
 native.cs: Gen.exe
 	LD_LIBRARY_PATH=${LIBDIR} MONO_PATH=${LIBDIR} mono Gen.exe ./ ./ ./
